@@ -1,0 +1,70 @@
+/* Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page background (ONLY ONE COLOR) */
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f; /* single background */
+  font-family: Arial, sans-serif;
+}
+
+/* Counter card */
+.counter-box {
+  background-color: #2a2a2a;
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Headings */
+.counter-box h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.counter-box h2 {
+  color: #4caf50;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+button.inc {
+  background-color: #4caf50;
+}
+
+button.inc:hover {
+  background-color: #43a047;
+}
+
+button.dec {
+  background-color: #f44336;
+}
+
+button.dec:hover {
+  background-color: #e53935;
+}
