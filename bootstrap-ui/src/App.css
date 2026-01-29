@@ -1,0 +1,29 @@
+body {
+  background-color: #0b0f14;
+}
+
+/* Gradient Navbar */
+.gradient-navbar {
+  background: linear-gradient(90deg, #6a7be6, #7a4bb7);
+  padding: 10px 30px;
+}
+
+/* Form Section */
+.form-section {
+  min-height: 70vh;
+  background-color: #f8f9fa;
+}
+
+/* Contact Card */
+.contact-card {
+  width: 380px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, #6a7be6, #7a4bb7);
+  color: white;
+  border: none;
+}
