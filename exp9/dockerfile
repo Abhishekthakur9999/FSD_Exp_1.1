@@ -1,0 +1,24 @@
+# Stage 1: Build the React app (Node 20 for Vite)
+FROM node:20-alpine AS build
+WORKDIR /app
+
+# copy package files and install dependencies (cache-friendly)
+COPY package*.json ./
+RUN npm install
+
+# copy source and build (Vite outputs to dist/)
+COPY . .
+RUN npm run build
+
+# Optionally (temporary) check the build output for debugging:
+# RUN ls -la /app && ls -la /app/dist
+
+# Stage 2: Serve the app with nginx
+FROM nginx:alpine
+
+# Clear default nginx content (optional) and copy built files
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

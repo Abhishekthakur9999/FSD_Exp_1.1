@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DAY ZERO – Life Before Deadline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+
+  <!-- HERO -->
+  <header class="hero container">
+    <h1>DAY ZERO</h1>
+    <p class="subtitle">Visualize deadlines. Eliminate burnout.</p>
+    <a href="#app" class="btn primary">Launch App</a>
+  </header>
+
+  <!-- APP -->
+  <section id="app" class="container">
+
+    <!-- SETUP -->
+    <section class="card">
+      <label>Total Work (hours)</label>
+      <input type="number" id="totalWork" value="100" />
+
+      <label>Daily Capacity (hrs/day)</label>
+      <input type="number" id="capacity" value="4" />
+
+      <label>Delay Start (days)</label>
+      <input type="range" id="delay" min="0" max="60" value="0" />
+      <p id="delayText">0 days</p>
+
+      <label>Deadline</label>
+      <input type="date" id="deadline" />
+      <p id="daysLeftText">Days left: 30</p>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+      <div class="card">
+        <h3>⚠ Stress Meter</h3>
+        <div class="stress-bar">
+          <div class="stress-fill" id="stressFill"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📊 Required Work</h3>
+        <p id="dailyWork">0 hrs/day</p>
+      </div>
+
+      <div class="card">
+        <h3>🕒 Free Time</h3>
+        <p id="freeTime">0 hrs/day</p>
+      </div>
+    </section>
+
+    <!-- CHART -->
+    <section class="card">
+      <h3>📈 Workload Projection</h3>
+      <canvas id="workChart" height="120"></canvas>
+    </section>
+
+  </section>
+
+  <footer>
+    <p>© 2026 DAY ZERO</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

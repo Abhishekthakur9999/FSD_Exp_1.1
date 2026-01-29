@@ -5,14 +5,14 @@
   box-sizing: border-box;
 }
 
-/* Full page background (ONLY ONE COLOR) */
+
 .page {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1f1f1f; /* single background */
+  background-color: #1f1f1f; 
   font-family: Arial, sans-serif;
 }
 
